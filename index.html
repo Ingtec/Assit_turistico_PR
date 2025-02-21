@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Turístico de Puerto Rico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Asistente Turístico de Puerto Rico 🌴</h1>
+        <p>Pregunta sobre lugares turísticos, clima, eventos históricos o recomendaciones.</p>
+        <form action="/" method="post">
+            <input type="text" name="user_input" placeholder="¿En qué puedo ayudarte?" required>
+            <button type="submit">Preguntar</button>
+        </form>
+        {% if user_input %}
+            <h2>Tu pregunta:</h2>
+            <p>{{ user_input }}</p>
+            <h2>Respuesta:</h2>
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
