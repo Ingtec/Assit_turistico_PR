@@ -13,7 +13,7 @@ import os
 from flask import Flask, request, jsonify, render_template
 
 # Configurar Gemini AI
-genai.configure(api_key="TU_GEMINI_API_KEY")
+genai.configure(api_key="AIzaSyD80fJOFp3xbhvz7wiG2gL6b4rEFSNxPy4")
 
 # 📌 **Definir archivo de memoria**
 MEMORY_FILE = "chatbot_memory.json"
